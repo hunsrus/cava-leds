@@ -4,6 +4,13 @@
 # C.A.V.A control for LEDs
 Control LEDs (or any other light source) intensity trough C.A.V.A raw output and Arduino.
 # C.A.V.A use
-This project uses raw data provided by C.A.V.A. (Console-based Audio Visualizer for ALSA). Follow the documentation in the C.A.V.A project [GitHub page](https://github.com/karlstav/cava) to understand and install it.
+This project uses raw data provided by C.A.V.A (Console-based Audio Visualizer for ALSA). Follow the documentation in the C.A.V.A project [GitHub page](https://github.com/karlstav/cava) to understand and install it.
 
 ---
+### How to use
+To run the program that sends raw data from C.A.V.A trough the serial port, you should run the following command:
+```
+cava | cava-raw-output
+```
+### Arduino
+The code in `led-controller.ino` should be loaded in your Arduino. It takes 4-bit brightness data input from the serial port and uses it to set the light intensity trough the analog output pins.
