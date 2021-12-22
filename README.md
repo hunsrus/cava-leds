@@ -7,6 +7,13 @@ Control LEDs (or any other light source) intensity trough C.A.V.A raw output and
 This project uses raw data provided by C.A.V.A (Console-based Audio Visualizer for ALSA). Follow the documentation in the C.A.V.A project [GitHub page](https://github.com/karlstav/cava) to understand and install it.
 
 ---
+### Set up
+You should modify the C.A.V.A [config](https://github.com/karlstav/cava/blob/master/example_files/config) file to your liking, making sure to set the following parameters:
+```
+data_format = ascii
+bit_format = 8bit
+method = raw
+```
 ### How to use
 To run the program that sends raw data from C.A.V.A trough the serial port, you should run the following command:
 ```
